@@ -17,7 +17,9 @@ USERS_REGISTRATION_SCHEMA = {
         'occupation': STRING_SCHEMA,
         'password': STRING_SCHEMA,
         'location': LOCATION_SCHEMA,
+        'ghana_gps': STRING_SCHEMA,
         'gender': STRING_SCHEMA,
+        'emergency_contact:': STRING_SCHEMA,
         'date_of_birth': STRING_SCHEMA,
     },
     'additionalProperties': False,
@@ -27,9 +29,8 @@ USERS_VERIFICATION_SCHEMA = {
     '$schema': DRAFT_7_SCHEMA,
     'type': 'object',
     'properties': {
-        'email': EMAIL_SCHEMA,
+        'phone': STRING_SCHEMA,
         'password': STRING_SCHEMA,
-        'device_id': STRING_SCHEMA
     },
     'additionalProperties': False,
     'required': ['phone']
@@ -47,6 +48,9 @@ USER_UPDATE_SCHEMA = {
         'phone': STRING_SCHEMA,
         'marital_status': STRING_SCHEMA,
         'occupation': STRING_SCHEMA,
+        'emergency_contact:': STRING_SCHEMA,
+        'ghana_gps': STRING_SCHEMA,
+
     },
     'additionalProperties': False,
     'required': ['id']
